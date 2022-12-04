@@ -1,0 +1,525 @@
+/*
+RESET STYLE
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  font-family: "Roboto", sans-serif;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+ul {
+  list-style: none;
+  position: fixed;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+
+
+/*
+----------------------------------------------------------
+*/
+
+h1{
+  font-size: 40; 
+  color:rgb(237, 29,36);
+  padding-bottom: 35px;
+  text-align: center;
+}
+
+/*Projects*/
+
+
+#projects{
+  background: #D4D4D4;
+  width: 100%;
+  height: auto;
+  margin-top: 100px;
+  padding: 80px;
+  padding-bottom: 100px;
+}
+
+#projects p{
+  color:rgb(237, 29,36);
+  padding: 35px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 40px;
+}
+
+#WhoWeAre h1{
+  margin-top: 200px;
+}
+
+#WhoWeAre p{
+  width: 50%; 
+  margin: auto; 
+  margin-top: 2em; 
+  margin-bottom: 2em; 
+  font-size: 23;
+  color: white;
+  text-align: center;
+  margin-bottom: 300px;
+}
+
+
+
+hr{
+  height: 2px;
+  border: none;
+  width: 300px;
+  margin: auto;
+}
+
+/*---*/
+
+html {
+  background-color: black;
+}
+
+.navBar {
+  text-align: left;
+  font-size: 30;
+  color: white;
+  /* padding-top: 1%; */
+  /* padding-bottom: 0%; */
+  /* padding-left: 30; */
+  width: 100%;
+  /* height: 19%; */
+  background: rgb(0, 0, 0);
+  position: fixed;
+  z-index: 7;
+}
+
+/*
+Nav Bar
+---------------------------------------------------
+*/
+
+body{
+  letter-spacing: 1px;
+  line-height: 30px;
+}
+
+ul {
+  /* padding-top: 1%; */
+  list-style-type: none;
+  background-color: black;
+  width: 100%;
+  /*overflow: hidden;*/
+}
+
+li {
+  float: left;
+  padding: 10;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px 15px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: gray;
+}
+
+/*
+Drop Down
+---------------------------------------------------
+*/
+
+.dropbtn {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  padding: 14px;
+  font-size: 14px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(53, 53, 53);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  align-items: center;
+}
+
+.dropdown-content a:hover {
+  background-color: gray;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: gray;
+}
+
+/*
+Slideshow/Carousel
+------------------------------------------------------------
+*/
+
+* {
+  box-sizing: border-box;
+}
+.mySlides {
+  display: none;
+}
+
+.slideshow-container img {
+  vertical-align: middle;
+  /*margin-top: 10%;*/
+  height: 1000px;
+  width: auto;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  z-index: -9999;
+}
+
+/* Caption text */
+.SlideShowtext {
+  font-size: 40px;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+  background-color: rgb(0, 0, 0, 0);
+  color: rgb(241, 241, 241);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: rgb(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.5s ease;
+}
+
+.active {
+  background-color: rgb(237, 29,36);
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.65;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {
+    font-size: 11px;
+  }
+}
+
+/*End Slideshow
+--------------------------------------------------------
+*/
+.fa {
+    text-align: center;
+  
+    text-decoration: none;
+  
+    margin-right: 1em;
+  
+    /*
+    font-size: 30px;
+    padding: 7px;
+    width: 20px;
+    border-radius: 100%;
+    margin-top: 4.25em;
+  
+    */
+  }
+  
+  .fa:hover {
+    color: white;
+  }
+  
+  .fa-facebook {
+    position: absolute;
+    bottom: 10%;
+    right: 13%;
+    background: rgb(0, 0, 0, 0);
+    color: rgb(108, 0, 0);
+  }
+  
+  .fa-twitter {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    background: rgb(0, 0, 0, 0);
+    color: rgb(108, 0, 0);
+  }
+  
+  .fa-linkedin {
+    position: absolute;
+    bottom: 10%;
+    right: 7%;
+    background: rgb(0, 0, 0, 0);
+    color: rgb(108, 0, 0);
+  }
+  
+  .fa-instagram {
+    position: absolute;
+    bottom: 10%;
+    right: 4%;
+    background: rgb(0, 0, 0, 0);
+    color: rgb(108, 0, 0);
+  }
+  
+  .FooterText {
+    position: absolute;
+    bottom: 3%;
+    right: 1%;
+    color: rgb(0, 0, 0);
+    font-family: "Roboto", sans-serif;
+    font-style: bold;
+  }
+  
+  .footer {
+    left: 0;
+    top: 0px;
+    width: 100%;
+    position: relative;
+    color: white;
+    text-align: right;
+    font-family: "Roboto", sans-serif;
+    font-style: bold;
+    background-color: #D4D4D4;
+  }
+
+  /*------------------------------
+  Projects
+  */
+
+  .row {
+    margin: 10px -16px;
+  }
+  
+  /* Add padding BETWEEN each column */
+  .row,
+  .row > .column {
+    padding: 10px;
+  }
+  
+  /* Create three equal columns that floats next to each other */
+  .column {
+    float: left;
+    max-width: 33.33%;
+    display: none; /* Hide all elements by default */
+  }
+  
+  /* Clear floats after rows */ 
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /*RESIZING*/
+
+@media screen and (min-width: 751px) {
+  #projects .column .itemBoxContent p {
+    font-size: 15px;
+    font-weight: 400;
+  }
+}
+
+
+@media screen and (max-width: 750px) {
+  #projects .column .itemBoxContent p {
+    font-size: 8.5px;
+    font-weight: 100;
+  }
+}
+
+@media screen and (min-width: 751px) {
+  #projects .column .itemBoxContent img {
+    height: auto;
+    width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 750px) {
+  #projects .column .itemBoxContent img {
+    height: 200px;
+    width: 100%;
+  }
+}
+/*-----------------------------------*/
+
+@media screen and (min-width: 751px) {
+  #projects .column {
+    max-width: 33.33%;
+  }
+}
+
+
+@media screen and (max-width: 750px) {
+  #projects .column {
+    max-width: 100%;
+  }
+}
+
+  /* Content */
+  .itemBoxContent {
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  #projects .column .itemBoxContent #p2{
+    color:black;
+    text-align: center;
+    /*
+    font-size: 1.3vw;
+    */
+    font-size: 15px;
+  }
+
+  .p2{
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+  }
+  
+
+  /*
+  #projects .column .itemBoxContent p{
+    color:blue;
+    text-align: center;
+    font-size: 20px;
+  }
+  */
+  
+  .DropDownContent {
+    padding: 0 0px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  /* The "show" class is added to the filtered elements */
+  .show {
+    display: block;
+  }
+  
+  /* Style the buttons */
+  
+  .collapsible {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.2);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    text-align: center;
+  }
+  
+  .collapsible:hover{
+      background: rgb(237,29,37);
+      color:white;
+  }
+/*
+  #projectIMG{
+      height: auto;
+      width: 100%;
+  }
+  */
+
+.column img:hover{
+    cursor: pointer;
+}
+
+  
+

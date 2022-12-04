@@ -1,0 +1,136 @@
+<html>
+  <head>
+    <head>
+        <title>Carolina Sound Communications</title>
+        <link rel="stylesheet" href="scentAir.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+      </head>
+      <nav class="navbar" style="position: fixed; z-index: 2;">
+        <div class="container">
+          <div class="navbar-header">
+            <button class="navbar-toggler" data-toggle="open-navbar1">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <a href="index.html">
+              <img src='CSC-logo.jpg' class="CompanyLogo" onmouseover="this.src='CSC-hover.jpg';" onmouseout="this.src='CSC-logo.jpg';" data-aos="fade-down"/>
+            </a>
+          </div>
+    
+          <div class="navbar-menu" id="open-navbar1" data-aos="fade-down">
+            <ul class="navbar-nav">
+              
+              <li class="navbar-dropdown">
+                <a href="#0" class="dropdown-toggler" data-dropdown="what-we-do">
+                  About Us<i class="fa fa-angle-down" style="margin-left: 5px;"></i>
+                </a>
+                <ul class="dropdown" id="what-we-do" style="background-color: rgb(12,12,12)">
+
+                  <li><a href="employees.html">Our Staff</a></li>
+                  <li class="separator"></li>
+                  <li><a href="Service.html">Services</a></li>
+                </ul>
+              </li>
+              <li><a href="Brands.html">Brands</a></li>
+              <li><a href="customers.html">Customers</a></li>
+              <li><a href="MOOD.html">Mood Media</a></li>
+              <li><a href="scentAir.html">ScentAir</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <hr style="width: 100%; position: fixed; z-index: 1; top: 100px;">
+
+      <div class="scentAirLogo" data-aos="fade-in">
+        <a href="https://scentair.com/about-scentair" target="_blank"><img src="scentair.2.jpg"></a>
+      </div>
+      
+      <hr style="width: 20%; 
+      margin-right: auto; 
+      margin-left: auto; 
+      background-color: rgb(99, 99, 99);
+      margin-bottom: 7%;">
+      
+      <div class="info" data-aos="fade-up">
+        <p>Scent is the most powerful way to connect on emotional and memorable levels with your customers. We have used scent in our homes and lives for millenia and businesses are just starting to tap into this awesome power. ScentAir is the global leader of adding more to your customer experience through the power of scent</p>
+      </div>
+
+      <div class="HowItWorks" data-aos="fade-up">
+
+        <p><span data-aos="fade-up">Operating in 105 countries, with over 40,000 deployments, ScentAir is the largest and most experienced scent provider.</span></p>
+
+        <hr style="width: 20%; 
+        margin-right: auto; 
+        margin-left: auto; 
+        background-color: rgb(99,99,99); 
+        margin-top: 2%;
+        margin-bottom: 1%;"
+        data-aos="fade-up">
+
+        <p data-aos="fade-up">Experiences matter. Our sense of smell is the strongest way to add more to the customer experience. Because of our people and our commitment to this idea, you can trust ScentAir to get it right and to add more for your customers.
+        </p>
+
+        <p data-aos="fade-up" style="padding-top: 3%">ScentAir creates over 4 billion enduring impressions for our customers each year. People like you rely on us to provide affordable and effective scent delivery solutions for a variety of business environments. We are the pioneers, the innovators, and the leaders. Let us help you add more.</p>
+
+      </div>
+      
+
+ 
+
+      
+    <div class="footer">
+      <img src="footer_transparent.png" style="width: 100%">
+      <a
+        href="https://www.facebook.com/carolinasoundcommunications"
+        class="fa fa-facebook"
+      ></a>
+      <a href="https://twitter.com/CarolinaSoundSC" class="fa fa-twitter"></a>
+      <a
+        href="https://www.linkedin.com/company/carolina-sound-communications-inc-muzak/"
+        class="fa fa-linkedin"
+      ></a>
+      <a href="#" class="fa fa-instagram"></a>
+      <p class="FooterText">
+        ©2022 Carolina Sound Communications
+      </p>
+    </div>
+
+</html>
+
+<script>
+  //nav bar dropdowns
+  let dropdowns = document.querySelectorAll(".navbar .dropdown-toggler");
+  let dropdownIsOpen = false;
+
+  if (dropdowns.length) {
+    dropdowns.forEach((dropdown) => {
+      dropdown.addEventListener("click", (event) => {
+        let target = document.querySelector(
+          `#${event.target.dataset.dropdown}`
+        );
+
+        if (target) {
+          if (target.classList.contains("show")) {
+            target.classList.remove("show");
+            dropdownIsOpen = false;
+          } else {
+            target.classList.add("show");
+            dropdownIsOpen = true;
+          }
+        }
+      });
+    });
+  }
+
+  handleSmallScreens();
+</script>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script> //Scroll Animation
+    AOS.init();
+  </script>

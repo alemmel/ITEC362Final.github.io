@@ -1,0 +1,425 @@
+<html>
+  <head>
+    <title>Carolina Sound Communications</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+    <div class="navBar" style="font-family: 'Roboto', sans-serif">
+      <a href ="index.html"><img src="cs-logos_03.png" alt="Carolina_Sound"; style="width:21%;" /></a>
+      <!--Replace with company png and link to actual home page-->
+      <ul>
+        <li>
+          <div class="dropdown">
+            <button class="dropbtn">What We Do</button>
+            <div class="dropdown-content">
+              <a href="#">Systems</a>
+              <a href="#">Services</a>
+              <a href="#">Branding</a>
+              <a href="#">Markets</a>
+              <a href="#">Products</a>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="dropdown">
+            <button class="dropbtn">About Us</button>
+            <div class="dropdown-content">
+              <a href="#">Management</a>
+              <a href="#">Engineering</a>
+              <a href="#">Technical</a>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="dropdown">
+            <button class="dropbtn">Accomplishments</button>
+            <div class="dropdown-content">
+              <a href="#">Projects</a>
+              <a href="#">Testimonials</a>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="dropdown">
+            <button class="dropbtn">Support & Education</button>
+            <div class="dropdown-content">
+              <a href="#">Resources</a>
+              <a href="#">Education</a>
+            </div>
+          </div>
+        </li>
+
+        <li style="float: right; margin-right:2.2em">
+          <div class="dropdown">
+            <button class="dropbtn">Contact</button>
+            <div class="dropdown-content">
+              <a href="#">Info</a>
+              <a href="#">Requests</a>
+              <a href="#">Survey</a>
+              <a href="#">Employment</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <img src="Sign1.JPG" style="width: 100%" />
+      </div>
+      
+      <div class="mySlides fade">
+        <img src="Garage.JPG" style="width: 100%" />
+      </div>
+
+      <div class="mySlides fade">
+        <img src="Boardroom.JPG" style="width: 100%" />
+      </div>
+      
+    </div>
+  
+    <br />
+
+    <div style="text-align: center">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
+    <script>
+      let slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 12000); // Change image every 2 seconds
+      }
+    </script>
+
+    <div id="WhoWeAre">
+      <h1>Who We Are</h1>
+      <hr style="background-color: rgb(46, 46, 46)">
+
+      <p>
+        For over 70 years Carolina Sound has been providing valuable communication, business music and branding services for businesses like yours. Our success is based on providing quality systems and services, custom designed to meet the needs of each client. Add to that a commitment to customer satisfaction and a drive to make technology work for you, and Carolina Sound becomes the logical choice for all of your low-voltage systems needs.
+        <br><br>Carolina Sound Communications designs, installs, and services audio, video, and security solutions to meet the needs of commercial clients.
+      </p>
+
+    </div>
+
+    <div id="projects">
+      <p>Projects</p>
+      <hr style="background-color: #afafaf">
+
+       <!-- Portfolio Gallery Grid -->
+
+<div class="row">
+  <div class="column">
+    <div class="itemBoxContent">
+      <a href="https://creditonestadium.com/" target="_blank"><img src="Projects/Credit_One_Stadium/CreditOneStadium.jpg" id="projectIMG"></a>
+      <div class="p2">Credit One Stadium</div>
+       <!--
+      <p>Lorem ipsum dolor..</p>
+      -->
+      <button class="collapsible"><i class="fa fa-unsorted"></i></button>
+        <div class="DropDownContent">
+            <p style="color: black;  letter-spacing: 0.05vw; text-align: left; line-height: 1.5vw;">
+              CSC installed QSC House Public Address System, Broadcast Infrastructure for television and concerts, video walls and other A/V in suites.
+            </p>
+        </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="itemBoxContent">
+      <a href="https://www.marriott.com/en-us/hotels/chsmc-charleston-marriott/overview/?scid=bb1a189a-fec3-4d19-a255-54ba596febe2&y_source=1_NjQ3NTA4LTcxNS1sb2NhdGlvbi53ZWJzaXRl" target="_blank"><img src="Projects/Charleston_Marriot/Charleston-Marriott-Top-Banner.jpg" id="projectIMG"></a>
+      <div class="p2">Charleston Marriot</div>
+       <!--
+      <p>Lorem ipsum dolor..</p>
+      -->
+      <button class="collapsible"><i class="fa fa-unsorted"></i></button>
+        <div class="DropDownContent">
+            <p style="color: black;  letter-spacing: 0.05vw; text-align: left; line-height: 1.5vw;">
+              JHM Hotels, a technology and customer service driven company, renovated this property over the course of three years.   The owners came to us to help them build and integrate systems.  Through the use of Crestron we integrated their hotel systems to allow for several music zones, room combining systems, and digital signage.  We also provided the property with speicalty scent for further branding.  As you approach the building you will be welcomed by Muzak playing through Klipsch speakers.  The inside of the property welcomes you with a pleasant scent complemented by Muzak playing through Bose speakers.  Carolina Sound Communications and JHM Hotels partnered to make an older Charleston hotel into a wonderful new experience.
+            </p>
+        </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="itemBoxContent">
+      <a href="https://www.cdc.gov/cpr/eoc/eoc.htm" target="_blank"><img src="Projects/Emergency_Operations_Center/EOC.jpg" id="projectIMG"></a>
+      <div class="p2">Emergency Operations Center</div>
+      <!--
+      <p>Lorem ipsum dolor..</p>
+      -->
+      <button class="collapsible"><i class="fa fa-unsorted"></i></button>
+        <div class="DropDownContent">
+          <p style="color: black; letter-spacing: 0.05vw; text-align: left; line-height: 1.5vw;">
+            CSC performed several computer signal analyses on local and distant off air TV channels. Normal Satellite delivery systems such as Dish Network and Direct TV are inadequate for signal reception during Hurricane, Tornado and Earthquake conditions because heavy rainfall renders the satellite reception inoperable, and antenna movement cause by high winds or ground temblors has the same effect.<br>
+            <br>Heavy duty commercial receiving antennas were installed for the local off air TV channels, providing satellite systems which can be quickly taken down in high winds, and as quickly reinstalled.
+          </p>
+        </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="itemBoxContent">
+      <a href="https://charlestonplace.com/" target="_blank"><img src="Projects/ChsPlaceHotel/CharlestonPlaceHotel.png" id="projectIMG"></a>
+      <div class="p2">Charleston Place Hotel</div>
+      <!--
+      <p>Lorem ipsum dolor..</p>
+      -->
+      <button class="collapsible"><i class="fa fa-unsorted"></i></button>
+        <div class="DropDownContent">
+          <p style="color: black; letter-spacing: 0.05vw; text-align: left; line-height: 1.5vw;">
+            CSC installed Klipsch and Bose sound systems, music, and intercom.
+          </p>
+        </div>
+    </div>
+  </div>
+
+
+  <div class="column">
+    <div class="itemBoxContent">
+      <a href="https://kiawahresort.com/" target="_blank"><img src="Projects/KiawahGolfResort/Kiawah.jpg" id="projectIMG"></a>
+      <div class="p2">Kiawah Island Golf Resort</div>
+      <button class="collapsible"><i class="fa fa-unsorted"></i></button>
+        <div class="DropDownContent">
+          <p style="color: black; letter-spacing: 0.05vw; text-align: left; line-height: 1.5vw;">
+            <span style="font-weight: bold">Kiawah Island golf resort</span> - CSC installed Bose sound systems (Bose sponsors PGA).<br>
+            <br><span style="font-weight: bold">Ocean Course Clubhouse</span> – Bose sound system<br>
+            <br><span style="font-weight: bold">Turtle Point Clubhouse</span> – Bose sound system and music<br>
+            <br><span style="font-weight: bold">Cougar Point Clubhouse</span> – Bose Sound System, Biamp DSP, TVs, music<br>
+            <br><span style="font-weight: bold">Osprey Point Clubhouse</span> – Sound System, Biamp DSP, all structured cabling<br>
+            <br><span style="font-weight: bold">Kiawah West Beach Conference Center</span> – Bose Sound system, Biamp DSP, Crestron Controls, Music, all
+            structured cabling<br>
+            <br><span style="font-weight: bold">Kiawah Night Herson Park Pavilion, Nest, and Nature Center</span> – Bose Sound System, Biamp DSP,
+            TVs, Music, all structured cabling<br>
+          </p>
+        </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="itemBoxContent">
+      <a href="https://www.danielislandclub.com/" target="_blank"><img src="Projects/DI_Clubhouse/DI_Clubhouse.jpg"id="projectIMG"></a>
+      <div class="p2">Daniel Island Clubhouse</div>
+      <button class="collapsible"><i class="fa fa-unsorted"></i></button>
+        <div class="DropDownContent">
+          <p style="color: black; letter-spacing: 0.05vw; text-align: left; line-height: 1.5vw;">
+            As one of Charleston's most prestigious golf destinations, the Daniel Island Club plays host to both an elite local membership and national tournaments. To provide their guests with an unparalleled experience, the Club uses audio-visual systems by Carolina Sound. These include sound and video displays in the ballrooms, a high-tech boardroom featuring Crestron DigitalMedia and Biamp audio conferencing, satellite and cable television distribution to dozens of flat screens, Crestron touch panel controls and Muzak Business Music throughout the facility. Lighting and window shade controls are integrated. Even the cart barn uses Carolina Sound's expertise to notify guests that the award-winning course is ready for them. 
+          </p>
+        </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="itemBoxContent">
+      <a href="https://www.destinationhotels.com/wild-dunes?src=corp_lclb_gmb_seo_chsdb" target="_blank"><img src="Projects/WildDunes/WildDunes.jpg" id="projectIMG"></a>
+      <div class="p2">Wild Dunes Resort Isle of Palms</div>
+       <!--
+      <p>Lorem ipsum dolor..</p>
+      -->
+      <button class="collapsible"><i class="fa fa-unsorted"></i></button>
+        <div class="DropDownContent">
+            <p style="color: black;  letter-spacing: 0.05vw; text-align: left; line-height: 1.5vw;">
+              Installed sound system and meeting room systems including Klipsch speakers and Crestron control of Biamp Digital Signal Processor.
+            </p>
+        </div>
+    </div>
+  </div>
+  
+
+  <div class="column">
+    <div class="itemBoxContent">
+      <a href="http://www.pigglywiggly.com/" target="_blank"><img src="Projects/Piggly_ Wiggly/PigglyWiggly.png" id="projectIMG"></a>
+      <div class="p2">Piggly Wiggly</div>
+      <button class="collapsible"><i class="fa fa-unsorted"></i></button>
+        <div class="DropDownContent">
+          <p style="color: black; letter-spacing: 0.05vw; text-align: left; line-height: 1.5vw;">
+            For 27 years Carolina Sound has provided Piggly Wiggly with music, point of purchase advertising, sound, and paging systems.  They have depended on the 24 hour a day, 7 day a week service on all of their leased equipment.  They continue to use our design services on all new applications. All existing locations use music and audio advertising.  Some of their flagship properties, such as Newton Farms also incorporate our scent products and Bose speakers.
+          </p>
+        </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="itemBoxContent">
+      <a href="https://cofcsports.com/sports/mens-basketball" target="_blank"><img src="Projects/CofC_Basketball/CofCBasketball.jpg" id="projectIMG"></a>
+      <div class="p2">College of Charleston Basketball Court</div>
+      <button class="collapsible"><i class="fa fa-unsorted"></i></button>
+        <div class="DropDownContent">
+          <p style="color: black; letter-spacing: 0.05vw; text-align: left; line-height: 1.5vw;">
+            CSC was awarded the contract to install the system. It consisted of 47 EV speakers, consisting of subsystems covering the playing floor, the stands, and center cluster allowing the arena to be used for purposes other then basketball, a multiple preset Digital Sound Processing (DSP) system, and 49 QSC amplifiers, with multiple mike and line amplifiers distributed through the arena, as well as two master input connectors for live sound presentations. A special system was installed to constantly evaluate amplifier performance.<br>
+            <br>An AV system was included for private and club use, consisting of a high output projector and supporting sound system.<br>
+            <br>CSC design responsibilities included designing the special furniture to mount the audio console and accessories and a rigging system to fly the speakers. All speakers were supported from roof supports, approximately 65 feed above the playing floor. A total of 23 clusters were involved.<br>
+            <br>The system was installed on time and within budget. It has since performed flawlessly.
+          </p>
+        </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="itemBoxContent">
+      <a href="https://www.clare.church/" target="_blank"><img src="Projects/StClaireChurch/StClaireChurch.png" id="projectIMG"></a>
+      <div class="p2">St. Claire of Assisi Catholic Church</div>
+      <button class="collapsible"><i class="fa fa-unsorted"></i></button>
+        <div class="DropDownContent">
+          <p style="color: black; letter-spacing: 0.05vw; text-align: left; line-height: 1.5vw;">
+            CSC installed Audio Video and streaming systems.
+          </p>
+        </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="itemBoxContent">
+      <a href="https://www.ccsdschools.com/" target="_blank"><img src="Projects/CHS_County_School_District/boardroom_banner.png" id="projectIMG"></a>
+      <div class="p2">Charleston County School District Boardroom</div>
+      <button class="collapsible"><i class="fa fa-unsorted"></i></button>
+        <div class="DropDownContent">
+          <p style="color: black; letter-spacing: 0.05vw; text-align: left; line-height: 1.5vw;">
+            The Charleston County School District serves 42,000 children. The Board charged with managing this responsibility depends on Carolina Sound to provide audio-visual services for their meeting and hearing space. The system at 75 Calhoun Street encompasses three video projectors with vibration-isolating mounts, an interactive Smart Board, and a lobby LCD which can display either digital signage or show the meeting for overflow crowds. The state-of-the-art sound system uses Biamp digital signal processors to create a room capable of dividing into multiple systems when necessary and managing up to 40 microphones without feedback. A Crestron touch panel makes control simple for the operator. A press panel allows local media to tap into the system for high-quality broadcast sound. Hearing Assistance is provided for ADA compliance. This Carolina Sound system ensures that every student, teacher or Board member's opinions are heard.
+          </p>
+        </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="itemBoxContent">
+      <a href="https://www.ccsdschools.com/Domain/72" target="_blank"><img src="Projects/North_CHS_HS/NorthCHS_HS.jpg" id="projectIMG"></a>
+      <div class="p2">North Charleston Highschool</div>
+      <button class="collapsible"><i class="fa fa-unsorted"></i></button>
+        <div class="DropDownContent">
+          <p style="color: black; letter-spacing: 0.05vw; text-align: left; line-height: 1.5vw;">
+            The large N. Charleston High School Cafeteria built with painted concrete block walls, vinyl flooring and glass windows presented a serious problem with speech echoing from these surfaces.<br>
+            <br>This serious reverberation problem resulted in an inability to use the cafeteria for meetings since speech could not be understood, creating a high-stress environment where students under-perform.<br>
+            <br>CSC corrected the problem by installation of sound absorbing acoustical panels on the wall surfaces of the cafeteria. The reverberance of the room was calculated using industry accepted computer programs. It was found to be more than 7 seconds, an unacceptable amount of time.<br>
+            <br>The cafeteria can be and is now used by the Principal for faculty meetings. The cafeteria can be and is now used by the Principal for faculty meetings.
+          </p>
+        </div>
+    </div>
+  </div>
+
+<!--
+  <div class="column">
+    <div class="itemBoxContent">
+      <a href="" target="_blank"><img src="Projects/Double_Tree_Inn/DoubleTreeInn.png" id="projectIMG"></a>
+      <div class="p2">Doubletree Inn North Charleston</div>
+      <button class="collapsible"><i class="fa fa-unsorted"></i></button>
+        <div class="DropDownContent">
+          <p style="color: black; letter-spacing: 0.05vw; text-align: left; line-height: 1.5vw;">
+            This former atrium property is currently being transformed into a trendy new hotel with features not found in other local properties.  We have worked with the owners of the property to properly zone the hotel to allow for room combining systems in the meeting rooms, an outdoor TV viewing area, different music at the pool, and a lobby lounge with a cutting edge sound system and featuring a 2x2 video wall.<br>
+            <br>Carolina Sound is also providing a security camera system for the facility.
+          </p>
+        </div>
+    </div>
+  </div>
+-->
+  
+<!-- END GRID -->
+</div>
+    </div>
+
+   
+
+    
+
+    <div class="footer">
+      <img src="footer_transparent.png" style="width: 100%">
+      <a
+        href="https://www.facebook.com/carolinasoundcommunications"
+        class="fa fa-facebook"
+      ></a>
+      <a href="https://twitter.com/CarolinaSoundSC" class="fa fa-twitter"></a>
+      <a
+        href="https://www.linkedin.com/company/carolina-sound-communications-inc-muzak/"
+        class="fa fa-linkedin"
+      ></a>
+      <a href="#" class="fa fa-instagram"></a>
+      <p class="FooterText">
+        ©2022 Carolina Sound Communications
+      </p>
+      <!--
+      <h1 class="FooterText" style="text-align: left; font-size: 20px; margin-left: 1em;">Carolina Sound Communications</h1>
+      -->
+    </div>
+  </body>
+
+  <script>
+    
+    filterSelection("all")
+    function filterSelection(c) {
+      var x, i;
+      x = document.getElementsByClassName("column");
+      if (c == "all") c = "";
+      for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+      }
+    }
+    
+    function w3AddClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+      }
+    }
+    
+    function w3RemoveClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);     
+        }
+      }
+      element.className = arr1.join(" ");
+    }
+    </script>
+    
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        } 
+      });
+    }
+    
+    </script>
+  -->
+</html>

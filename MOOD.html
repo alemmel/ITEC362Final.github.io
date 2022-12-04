@@ -1,0 +1,142 @@
+<html>
+  <head>
+    <head>
+        <title>Carolina Sound Communications</title>
+        <link rel="stylesheet" href="MOOD.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+      </head>
+      <nav class="navbar" style="position: fixed; z-index: 2;">
+        <div class="container">
+          <div class="navbar-header">
+            <button class="navbar-toggler" data-toggle="open-navbar1">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <a href="index.html">
+              <img src='CSC-logo.jpg' class="CompanyLogo" onmouseover="this.src='CSC-hover.jpg';" onmouseout="this.src='CSC-logo.jpg';" data-aos="fade-down"/>
+              <!--<img src="carolina-sound-communications-updated-logo.jpg" alt="Carolina_Sound"; style="width: 300px;" /></a>-->
+            </a>
+          </div>
+    
+          <div class="navbar-menu" id="open-navbar1" data-aos="fade-down">
+            <ul class="navbar-nav">
+              <!--
+              <li class="active"><a href="index.html">Home</a></li>
+              -->
+              <li class="navbar-dropdown">
+                <a href="#0" class="dropdown-toggler" data-dropdown="what-we-do">
+                  About Us<i class="fa fa-angle-down" style="margin-left: 5px;"></i>
+                </a>
+                <ul class="dropdown" id="what-we-do" style="background-color: rgb(12,12,12)">
+
+                  <li><a href="employees.html">Our Staff</a></li>
+                  <li class="separator"></li>
+                  <li><a href="Service.html">Services</a></li>
+                </ul>
+              </li>
+              <li><a href="Brands.html">Brands</a></li>
+              <li><a href="customers.html">Customers</a></li>
+              <li><a href="MOOD.html">Mood Media</a></li>
+              <li><a href="scentAir.html">ScentAir</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <hr style="width: 100%; position: fixed; z-index: 1; top: 100px">
+
+      <div class="MoodLogo" data-aos="fade-in">
+        <a href="https://us.moodmedia.com/company/" target="_blank"><img src="MoodMedia.png"></a>
+      </div>
+      
+      <hr style="width: 20%; 
+      margin-right: auto; 
+      margin-left: auto; 
+      background-color: rgb(99, 99, 99); 
+      margin-top: 2%;
+      margin-bottom: 10%;">
+      
+      <div class="info" data-aos="fade-up">
+        <p>As an Audio/Video service provider with more than <span>75 years experience</span>, MOOD has the end-to-end resources to fully develop, customize, manage and maintain a solution. <br><br>From consultation and design, to sales, installation, service and training, plus full content creation services if you need it, MOOD keeps it simple and affordable.</p>
+      </div>
+
+      <div class="HowItWorks" data-aos="fade-up">
+
+        <p style="padding-top: 10%"><span>Digital Signage</span> allows you to reduce print costs and increase the power of your message as you connect with customers and inform employees. Take the opportunity to up-sell products, inspire impulse purchases or highlight current promotions or upcoming events. Never underestimate the brand appeal of a sleek, flat screen TV.</p>
+            <p data-aos="fade-up">From personalized templates to branded custom content to digital menu boards, Digital Signage from MOOD allows you to connect with your customers with flexibility and control.</p><br>
+            <br><p><span data-aos="fade-up">Benefits</span></p>
+
+        <hr style="width: 20%; 
+            margin-right: auto; 
+            margin-left: auto; 
+            background-color: rgb(99,99,99); 
+            margin-bottom: 2%;"
+            data-aos="fade-up">
+
+        <ul style="color: white;" data-aos="fade-up">
+            <li data-aos="fade-up">Save on print costs</li>
+            <li data-aos="fade-up">Target specific customer / employee groups</li>
+            <li data-aos="fade-up">Quickly update messages with ease</li>
+        </ul>
+      </div>
+      
+
+ 
+
+      
+    <div class="footer">
+      <img src="footer_transparent.png" style="width: 100%">
+      <a
+        href="https://www.facebook.com/carolinasoundcommunications"
+        class="fa fa-facebook"
+      ></a>
+      <a href="https://twitter.com/CarolinaSoundSC" class="fa fa-twitter"></a>
+      <a
+        href="https://www.linkedin.com/company/carolina-sound-communications-inc-muzak/"
+        class="fa fa-linkedin"
+      ></a>
+      <a href="#" class="fa fa-instagram"></a>
+      <p class="FooterText">
+        ©2022 Carolina Sound Communications
+      </p>
+    </div>
+
+</html>
+
+<script>
+  // this shit is for the nav bar dropdowns
+  let dropdowns = document.querySelectorAll(".navbar .dropdown-toggler");
+  let dropdownIsOpen = false;
+
+  if (dropdowns.length) {
+    dropdowns.forEach((dropdown) => {
+      dropdown.addEventListener("click", (event) => {
+        let target = document.querySelector(
+          `#${event.target.dataset.dropdown}`
+        );
+
+        if (target) {
+          if (target.classList.contains("show")) {
+            target.classList.remove("show");
+            dropdownIsOpen = false;
+          } else {
+            target.classList.add("show");
+            dropdownIsOpen = true;
+          }
+        }
+      });
+    });
+  }
+
+
+  handleSmallScreens();
+</script>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script> //Scroll Animation
+    AOS.init();
+  </script>
