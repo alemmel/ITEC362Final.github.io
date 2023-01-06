@@ -18,18 +18,20 @@
             </button>
             <a href="index.html">
               <img src='CSC-logo.jpg' class="CompanyLogo" onmouseover="this.src='CSC-hover.jpg';" onmouseout="this.src='CSC-logo.jpg';" data-aos="fade-down"/>
+              <!--<img src="carolina-sound-communications-updated-logo.jpg" alt="Carolina_Sound"; style="width: 300px;" /></a>-->
             </a>
           </div>
     
           <div class="navbar-menu" id="open-navbar1" data-aos="fade-down">
             <ul class="navbar-nav">
-              
+              <!--
+              <li class="active"><a href="index.html">Home</a></li>
+              -->
               <li class="navbar-dropdown">
-                <a href="#0" class="dropdown-toggler" data-dropdown="what-we-do">
+                <a href="javascript:;" class="dropdown-toggler" data-dropdown="what-we-do">
                   About Us<i class="fa fa-angle-down" style="margin-left: 5px;"></i>
                 </a>
                 <ul class="dropdown" id="what-we-do" style="background-color: rgb(12,12,12)">
-
                   <li><a href="employees.html">Our Staff</a></li>
                   <li class="separator"></li>
                   <li><a href="Service.html">Services</a></li>
@@ -59,6 +61,18 @@
       <div class="info" data-aos="fade-up">
         <p>Scent is the most powerful way to connect on emotional and memorable levels with your customers. We have used scent in our homes and lives for millenia and businesses are just starting to tap into this awesome power. ScentAir is the global leader of adding more to your customer experience through the power of scent</p>
       </div>
+ <!--
+      <hr style="width: 20%; 
+      margin-right: auto; 
+      margin-left: auto; 
+      background-color: rgb(99,99,99); 
+      margin-bottom: 2%;">
+
+     
+      <div class="info" style="margin-top: 10%">
+        <p><span>Digital Signage</span> allows you to reduce print costs and increase the power of your message as you connect with customers and inform employees. Take the opportunity to up-sell products, inspire impulse purchases or highlight current promotions or upcoming events. Never underestimate the brand appeal of a sleek, flat screen TV.</p>
+      </div>
+    -->
 
       <div class="HowItWorks" data-aos="fade-up">
 
@@ -103,7 +117,7 @@
 </html>
 
 <script>
-  //nav bar dropdowns
+  // this shit is for the nav bar dropdowns
   let dropdowns = document.querySelectorAll(".navbar .dropdown-toggler");
   let dropdownIsOpen = false;
 
@@ -124,6 +138,38 @@
           }
         }
       });
+    });
+  }
+
+  window.addEventListener("mouseup", (event) => {
+    if (dropdownIsOpen) {
+      dropdowns.forEach((dropdownButton) => {
+        let dropdown = document.querySelector(
+          `#${dropdownButton.dataset.dropdown}`
+        );
+        let targetIsDropdown = dropdown == event.target;
+
+        if (dropdownButton == event.target) {
+          return;
+        }
+
+        if (!targetIsDropdown && !dropdown.contains(event.target)) {
+          dropdown.classList.remove("show");
+        }
+      });
+    }
+  });
+
+  function handleSmallScreens() {
+    document.querySelector(".navbar-toggler").addEventListener("click", () => {
+      let navbarMenu = document.querySelector(".navbar-menu");
+
+      if (navbarMenu.style.display === "flex") {
+        navbarMenu.style.display = "none";
+        return;
+      }
+
+      navbarMenu.style.display = "flex";
     });
   }
 

@@ -18,19 +18,20 @@
               </button>
               <a href="index.html">
                 <img src='CSC-logo.jpg' class="CompanyLogo" onmouseover="this.src='CSC-hover.jpg';" onmouseout="this.src='CSC-logo.jpg';" data-aos="fade-down"/>
-                
+                <!--<img src="carolina-sound-communications-updated-logo.jpg" alt="Carolina_Sound"; style="width: 300px;" /></a>-->
               </a>
             </div>
       
             <div class="navbar-menu" id="open-navbar1" data-aos="fade-down">
               <ul class="navbar-nav">
-               
+                <!--
+                <li class="active"><a href="index.html">Home</a></li>
+                -->
                 <li class="navbar-dropdown">
                   <a href="javascript:;" class="dropdown-toggler" data-dropdown="what-we-do">
                     About Us<i class="fa fa-angle-down" style="margin-left: 5px;"></i>
                   </a>
                   <ul class="dropdown" id="what-we-do" style="background-color: rgb(12,12,12)">
-
                     <li><a href="employees.html">Our Staff</a></li>
                     <li class="separator"></li>
                     <li><a href="Service.html">Services</a></li>
@@ -46,10 +47,14 @@
           </div>
         </nav>
       <hr style="width: 100%;  position: fixed; z-index: 1; top: 100px">
-      
+      <!--
+      <p id="Services"><strong>Services</strong></p>
+      -->
       <div class="banner">
           <img src="Speakers_Text.png" style="filter: grayscale(100%); width: 100%; padding-top: 3%;">
-          
+          <!--
+          <p>Services</p>
+          -->
       </div>
 
       </div>
@@ -69,7 +74,9 @@
         <p data-aos="fade-up" style="padding-bottom: 5%">Carolina Sound offers <span>Maintenance Contracts</span>, a great way to cap your maintenance expenses to a fixed monthly amount. Contracts are available on all systems and are billed at a flat monthly rate which can cover labor, parts, or both. Loaner equipment is available for most systems in case factory repairs are required. Contract rates vary depending on your system and the level of service that you need. Contact your Carolina Sound representative today for a free custom quote.</p>
       
     </div>
-  
+  <!--
+<hr style="width: 20%; margin-right: auto; margin-left: auto; background-color: rgb(99, 99, 99);">
+    -->
     <div class="installationInfo" data-aos="fade-up" style="padding-top: 60px;">
       <p>Our installers are <span>trained and experienced</span> in helping you get the most from your system. Every piece of your system is installed with three main concerns: Long-term reliability, excellent ergonomics, and a positive aesthetic appearance.
       </p>
@@ -97,13 +104,15 @@
       <p class="FooterText">
         ©2022 Carolina Sound Communications
       </p>
-      
+      <!--
+      <h1 class="FooterText" style="text-align: left; font-size: 20px; margin-left: 1em;">Carolina Sound Communications</h1>
+      -->
     </div>
 
 </html>
 
 <script>
-  //nav bar dropdowns
+  // this shit is for the nav bar dropdowns
   let dropdowns = document.querySelectorAll(".navbar .dropdown-toggler");
   let dropdownIsOpen = false;
 
@@ -124,6 +133,38 @@
           }
         }
       });
+    });
+  }
+
+  window.addEventListener("mouseup", (event) => {
+    if (dropdownIsOpen) {
+      dropdowns.forEach((dropdownButton) => {
+        let dropdown = document.querySelector(
+          `#${dropdownButton.dataset.dropdown}`
+        );
+        let targetIsDropdown = dropdown == event.target;
+
+        if (dropdownButton == event.target) {
+          return;
+        }
+
+        if (!targetIsDropdown && !dropdown.contains(event.target)) {
+          dropdown.classList.remove("show");
+        }
+      });
+    }
+  });
+
+  function handleSmallScreens() {
+    document.querySelector(".navbar-toggler").addEventListener("click", () => {
+      let navbarMenu = document.querySelector(".navbar-menu");
+
+      if (navbarMenu.style.display === "flex") {
+        navbarMenu.style.display = "none";
+        return;
+      }
+
+      navbarMenu.style.display = "flex";
     });
   }
 

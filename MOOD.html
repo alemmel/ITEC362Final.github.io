@@ -28,11 +28,12 @@
               <li class="active"><a href="index.html">Home</a></li>
               -->
               <li class="navbar-dropdown">
-                <a href="#0" class="dropdown-toggler" data-dropdown="what-we-do">
+                <a href="javascript:;" class="dropdown-toggler" data-dropdown="what-we-do">
                   About Us<i class="fa fa-angle-down" style="margin-left: 5px;"></i>
                 </a>
                 <ul class="dropdown" id="what-we-do" style="background-color: rgb(12,12,12)">
-
+                  <li><a href="history.html">History</a></li>
+                  <li class="separator"></li>
                   <li><a href="employees.html">Our Staff</a></li>
                   <li class="separator"></li>
                   <li><a href="Service.html">Services</a></li>
@@ -63,6 +64,18 @@
       <div class="info" data-aos="fade-up">
         <p>As an Audio/Video service provider with more than <span>75 years experience</span>, MOOD has the end-to-end resources to fully develop, customize, manage and maintain a solution. <br><br>From consultation and design, to sales, installation, service and training, plus full content creation services if you need it, MOOD keeps it simple and affordable.</p>
       </div>
+ <!--
+      <hr style="width: 20%; 
+      margin-right: auto; 
+      margin-left: auto; 
+      background-color: rgb(99,99,99); 
+      margin-bottom: 2%;">
+
+     
+      <div class="info" style="margin-top: 10%">
+        <p><span>Digital Signage</span> allows you to reduce print costs and increase the power of your message as you connect with customers and inform employees. Take the opportunity to up-sell products, inspire impulse purchases or highlight current promotions or upcoming events. Never underestimate the brand appeal of a sleek, flat screen TV.</p>
+      </div>
+    -->
 
       <div class="HowItWorks" data-aos="fade-up">
 
@@ -132,6 +145,37 @@
     });
   }
 
+  window.addEventListener("mouseup", (event) => {
+    if (dropdownIsOpen) {
+      dropdowns.forEach((dropdownButton) => {
+        let dropdown = document.querySelector(
+          `#${dropdownButton.dataset.dropdown}`
+        );
+        let targetIsDropdown = dropdown == event.target;
+
+        if (dropdownButton == event.target) {
+          return;
+        }
+
+        if (!targetIsDropdown && !dropdown.contains(event.target)) {
+          dropdown.classList.remove("show");
+        }
+      });
+    }
+  });
+
+  function handleSmallScreens() {
+    document.querySelector(".navbar-toggler").addEventListener("click", () => {
+      let navbarMenu = document.querySelector(".navbar-menu");
+
+      if (navbarMenu.style.display === "flex") {
+        navbarMenu.style.display = "none";
+        return;
+      }
+
+      navbarMenu.style.display = "flex";
+    });
+  }
 
   handleSmallScreens();
 </script>

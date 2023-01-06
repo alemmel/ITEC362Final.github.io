@@ -19,15 +19,17 @@
               </button>
               <a href="index.html">
                 <img src='CSC-logo.jpg' class="CompanyLogo" onmouseover="this.src='CSC-hover.jpg';" onmouseout="this.src='CSC-logo.jpg';" data-aos="fade-down"/>
-                
+                <!--<img src="carolina-sound-communications-updated-logo.jpg" alt="Carolina_Sound"; style="width: 300px;" /></a>-->
               </a>
             </div>
       
             <div class="navbar-menu" id="open-navbar1" data-aos="fade-down">
               <ul class="navbar-nav">
-              
+                <!--
+                <li class="active"><a href="index.html">Home</a></li>
+                -->
                 <li class="navbar-dropdown">
-                  <a href="#0" class="dropdown-toggler" data-dropdown="what-we-do">
+                  <a href="javascript:;" class="dropdown-toggler" data-dropdown="what-we-do">
                     About Us<i class="fa fa-angle-down" style="margin-left: 5px;"></i>
                   </a>
                   <ul class="dropdown" id="what-we-do" style="background-color: rgb(12,12,12)">
@@ -53,6 +55,24 @@
       </div>
       <hr style="width: 20%; margin-left: auto; margin-right: auto; margin-bottom: 50px; background-color: rgb(50,50,50)">
       
+      
+      <!--
+      <div class="contactForm">
+        <form action="/action_page.pfp" target="_blank"> 
+            <label for="Fname">First Name</label><br>
+            <input type="text" id="Fname" name="Fname" value=""><br>
+            <label for="Lname">Last Name</label><br>
+            <input type="text" id="Lname" name="Lname" value=""><br>
+            <label for="phone">Phone</label><br>
+            <input type="text" id="phone" name="phone" value=""><br>
+            <label for="email">Email</label><br>
+            <input type="text" id="email" name="email" value=""><br>
+            <label for="msg">Message</label><br>
+            <textarea name="msg"></textarea>
+            <p style="color: rgb(0,0,0,0)">.</p>
+            <input type ="submit">
+        </form>
+      -->
       <!-- Portfolio Gallery Grid -->
 
 <div class="row">
@@ -97,6 +117,7 @@
       Email: adr.lemmel@gmail.com<br>
       Charleston SC 29420<br>
 
+
     </p>
     
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3348.4632192401514!2d-80.06463048504615!3d32.938777583027466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88fe6230503efead%3A0x27bc84dc275aa4db!2s7630%20Southrail%20Rd%2C%20North%20Charleston%2C%20SC%2029420!5e0!3m2!1sen!2sus!4v1654024779209!5m2!1sen!2sus" 
@@ -122,12 +143,15 @@
       <p class="FooterText">
         ©2022 Carolina Sound Communications
       </p>
+      <!--
+      <h1 class="FooterText" style="text-align: left; font-size: 20px; margin-left: 1em;">Carolina Sound Communications</h1>
+      -->
     </div>
   </body>
 </html>
 
 <script>
-  //nav bar dropdowns
+  // this shit is for the nav bar dropdowns
   let dropdowns = document.querySelectorAll(".navbar .dropdown-toggler");
   let dropdownIsOpen = false;
 
@@ -148,6 +172,38 @@
           }
         }
       });
+    });
+  }
+
+  window.addEventListener("mouseup", (event) => {
+    if (dropdownIsOpen) {
+      dropdowns.forEach((dropdownButton) => {
+        let dropdown = document.querySelector(
+          `#${dropdownButton.dataset.dropdown}`
+        );
+        let targetIsDropdown = dropdown == event.target;
+
+        if (dropdownButton == event.target) {
+          return;
+        }
+
+        if (!targetIsDropdown && !dropdown.contains(event.target)) {
+          dropdown.classList.remove("show");
+        }
+      });
+    }
+  });
+
+  function handleSmallScreens() {
+    document.querySelector(".navbar-toggler").addEventListener("click", () => {
+      let navbarMenu = document.querySelector(".navbar-menu");
+
+      if (navbarMenu.style.display === "flex") {
+        navbarMenu.style.display = "none";
+        return;
+      }
+
+      navbarMenu.style.display = "flex";
     });
   }
 
